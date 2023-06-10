@@ -21,4 +21,7 @@ function drop(event) {
   const draggedObject = event.dataTransfer.getData("text/plain");
   document.getElementById(draggedObject).classList.remove("drag-effect");
   event.target.appendChild(document.getElementById(draggedObject));
+  
+  // alerting after some delay
+  setTimeout(() => alert("Item moved to source container successfully"), 200);
 }
