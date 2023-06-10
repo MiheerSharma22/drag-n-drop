@@ -20,6 +20,7 @@ function drop(event) {
   // fetch the data of dragged object (id) and append that into child of target
   const draggedObject = event.dataTransfer.getData("text/plain");
   document.getElementById(draggedObject).classList.remove("drag-effect");
+  document.getElementById(draggedObject).style.pointerEvents = "none";
   event.target.appendChild(document.getElementById(draggedObject));
   
   // alerting after some delay
