@@ -6,6 +6,7 @@ const dragHereText = document.querySelector('.drag-here-text');
 function dragStart(event) {
   //set the data of the item being dragged
   event.dataTransfer.setData("text/plain", event.target.id);
+  event.target.classList.add("drag-effect");
 }
 
 // used to prevent default action that is when we drag object over to another container, it will allow dropping the dragged object as we prevent default action
@@ -18,5 +19,6 @@ function drop(event) {
   event.preventDefault();
   // fetch the data of dragged object (id) and append that into child of target
   const draggedObject = event.dataTransfer.getData("text/plain");
+  document.getElementById(draggedObject).classList.remove("drag-effect");
   event.target.appendChild(document.getElementById(draggedObject));
 }

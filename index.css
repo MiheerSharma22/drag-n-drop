@@ -82,6 +82,10 @@
     position: relative;
   }
 
+  .drag-effect{
+    opacity:0.2;
+  }
+
   @media(max-width: 768px) {
     h1{
       text-align: center;
