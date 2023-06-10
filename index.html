@@ -8,20 +8,23 @@
     <script type="text/javascript" src="index.js"></script>
 </head>
 <body>
-    <h1> Drag the objects from first to second box</h1>
-    <div class="parent-container">
+    <div id="wrapper">
+        <h1> Drag the objects from first to second box</h1>
+        
+        <div class="parent-container">
+        
+            <div class="drag-source-container">
+            <div id="draggable-object" draggable="true" ondragstart="dragStart(event)"></div>
+            <div id="draggable-object2" draggable="true" ondragstart="dragStart(event)"></div>
+            <img id="draggable-object3" draggable="true" ondragstart="dragStart(event)" src="https://getwallpapers.com/wallpaper/full/e/2/6/618308.jpg"></img>
+            </div>
     
-        <div class="drag-source-container">
-        <div id="draggable-object" draggable="true" ondragstart="dragStart(event)"></div>
-        <div id="draggable-object2" draggable="true" ondragstart="dragStart(event)"></div>
-        <img id="draggable-object3" draggable="true" ondragstart="dragStart(event)" src="https://getwallpapers.com/wallpaper/full/e/2/6/618308.jpg"></img>
+            <div class="drag-target-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+        
         </div>
-  
-        <div class="drag-target-container" ondrop="drop(event)" ondragover="allowDrop(event)">
-        </div>
-    
-  </div>
-    <button onClick="window.location.href = window.location.href" class="reset-button"> Reset </button>
+        <button onClick="window.location.href = window.location.href" class="reset-button"> Reset </button>
+    </div>
 
 </body>
 </html>
